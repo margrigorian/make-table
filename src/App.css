@@ -38,6 +38,16 @@ td{
   font-weight: bold;
   background-color: rgba(245, 245, 148, 0.5);
 }
+tfoot{
+  font-weight: bold;
+}
+tfoot td{
+  padding: 3px 0;
+}
+.totalSum{
+  background-color: rgb(5, 58, 5);
+  color: white;
+}
 .paddingOfText{
   padding: 0 20px;
 }
@@ -46,4 +56,7 @@ td{
 }
 .border{
   border: 1px solid black;
+}
+.backcolor{
+  background-color: rgba(245, 245, 148, 0.5);
 }

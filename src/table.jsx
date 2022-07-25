@@ -90,6 +90,9 @@ class Table extends React.Component{
                             <Rows id={item.id} name={item.name} date={currentDate} count={item.count} price={item.price} amount={item.count * item.price}/>
                         )
                     }
+                    <FooterOfTable total={products.reduce((sum, current) => {
+                        return sum + current.count * current.price;
+                    }, 0)} />
                 </table> 
             </div>
         )
@@ -107,6 +110,21 @@ class Rows extends React.Component{
                 <td className="centeredText priceOfProduct border">{this.props.price}</td>
                 <td className="centeredText totalAmountOfProduct border">{this.props.amount}</td>
             </tr>
+        )
+    }
+}
+
+class FooterOfTable extends React.Component{
+    render() {
+        return (
+            <tfoot>
+                <td className="backcolor border"></td>
+                <td className="centeredText border backcolor">Total</td>
+                <td className="backcolor border"></td>
+                <td className="backcolor border"></td>
+                <td className="backcolor border"></td>
+                <td className="centeredText border totalSum">{this.props.total}</td>
+            </tfoot>
         )
     }
 }
