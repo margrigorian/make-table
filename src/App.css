@@ -1,13 +1,13 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
 }
 .divTable{
   display: inline-block;
-  margin: 5% 0 0 10%; 
+  margin: 5% 0 0 10%;  */
   /* margin: 10% auto не работает*/
-}
-.captionOfTable{
+/* } */
+/* .captionOfTable{
   font-size: 20px;
   padding: 10px;
   color: darkgreen;
@@ -59,4 +59,4 @@ tfoot td{
 }
 .backcolor{
   background-color: rgba(245, 245, 148, 0.5);
-}
+} */

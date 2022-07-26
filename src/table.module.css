@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  .divTable{
+    display: inline-block;
+    margin: 5% 0 0 10%; 
+    /* margin: 10% auto не работает*/
+  }
+  .captionOfTable{
+    font-size: 20px;
+    padding: 10px;
+    color: darkgreen;
+    font-weight: bold;
+  }
+  th{
+    padding: 10px 0;
+    background-color: rgba(23, 23, 23, .8);
+    color: white;
+  }
+  td{
+    padding-bottom: 5px;
+  }
+  .idOfProduct{
+    padding: 0 10px;
+    font-weight: 500;
+    color: rgb(8, 83, 8);
+  }
+  .nameOfProduct{
+    background-color: rgb(238, 243, 241);
+  }
+  .priceOfProduct{
+    color: brown;
+    font-weight: 500;
+  }
+  .totalAmountOfProduct{
+    color: rgba(23, 23, 23, 0.9);
+    font-weight: bold;
+    background-color: rgba(245, 245, 148, 0.5);
+  }
+  tfoot{
+    font-weight: bold;
+  }
+  tfoot td{
+    padding: 3px 0;
+  }
+  .totalSum{
+    background-color: rgb(5, 58, 5);
+    color: white;
+  }
+  .paddingOfText{
+    padding: 0 20px;
+  }
+  .centeredText{
+    text-align: center;
+  }
+  .border{
+    border: 1px solid black;
+  }
+  .backcolor{
+    background-color: rgba(245, 245, 148, 0.5);
+  }
+  

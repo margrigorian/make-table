@@ -1,5 +1,6 @@
 import React from "react";
-import './App.css';
+import style from "./table.module.css"
+// import "./App.css"
 
 class Table extends React.Component{
     render() {
@@ -74,20 +75,20 @@ class Table extends React.Component{
             }
         ]
         return (
-            <div className="divTable">
-                <table className="border">
-                    <caption className="captionOfTable">SALES TABLE</caption>
+            <div className={style.divTable}>
+                <table className={style.border}>
+                    <caption className={style.captionOfTable}>SALES TABLE</caption>
                     <tr>
-                        <th className="border">ID</th>
-                        <th className="border">Name</th>
-                        <th className="border">Data</th>
-                        <th className="paddingOfText border">Count</th>
-                        <th className="paddingOfText border">Price, $</th>
-                        <th className="paddingOfText border">Total amount, $</th>
+                        <th className={style.border}>ID</th>
+                        <th className={style.border}>Name</th>
+                        <th className={style.border}>Data</th>
+                        <th className={`${style.paddingOfText} ${style.border}`}>Count</th>
+                        <th className={`${style.paddingOfText} ${style.border}`}>Price, $</th>
+                        <th className={`${style.paddingOfText} ${style.border}`}>Total amount, $</th>
                     </tr>
-                    {products.map(item => 
+                    {products.map((item, i) => 
                             // {let countOfProduct = 1}
-                            <Rows id={item.id} name={item.name} date={currentDate} count={item.count} price={item.price} amount={item.count * item.price}/>
+                            <Rows key={i} id={item.id} name={item.name} date={currentDate} count={item.count} price={item.price} amount={item.count * item.price}/>
                         )
                     }
                     <FooterOfTable total={products.reduce((sum, current) => {
@@ -103,12 +104,12 @@ class Rows extends React.Component{
     render() {
         return (
             <tr>
-                <td className="idOfProduct border">{this.props.id}</td>
-                <td className="nameOfProduct paddingOfText border">{this.props.name}</td>
-                <td className="paddingOfText border">{this.props.date}</td>
-                <td className="centeredText border">{this.props.count}</td>
-                <td className="centeredText priceOfProduct border">{this.props.price}</td>
-                <td className="centeredText totalAmountOfProduct border">{this.props.amount}</td>
+                <td className={`${style.idOfProduct} ${style.border}`}>{this.props.id}</td>
+                <td className={`${style.nameOfProduct} ${style.paddingOfText} ${style.border}`}>{this.props.name}</td>
+                <td className={`${style.paddingOfText} ${style.border}`}>{this.props.date}</td>
+                <td className={`${style.centeredText} ${style.border}`}>{this.props.count}</td>
+                <td className={`${style.centeredText} ${style.priceOfProduct} ${style.border}`}>{this.props.price}</td>
+                <td className={`${style.centeredText} ${style.totalAmountOfProduct} ${style.border}`}>{this.props.amount}</td>
             </tr>
         )
     }
@@ -118,12 +119,12 @@ class FooterOfTable extends React.Component{
     render() {
         return (
             <tfoot>
-                <td className="backcolor border"></td>
-                <td className="centeredText border backcolor">Total</td>
-                <td className="backcolor border"></td>
-                <td className="backcolor border"></td>
-                <td className="backcolor border"></td>
-                <td className="centeredText border totalSum">{this.props.total}</td>
+                <td className={`${style.backcolor} ${style.border}`}></td>
+                <td className={`${style.centeredText} ${style.backcolor} ${style.border}`}>Total</td>
+                <td className={`${style.backcolor} ${style.border}`}></td>
+                <td className={`${style.backcolor} ${style.border}`}></td>
+                <td className={`${style.backcolor} ${style.border}`}></td>
+                <td className={`${style.centeredText}  ${style.border} ${style.totalSum}`}>{this.props.total}</td>
             </tfoot>
         )
     }
